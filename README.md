@@ -81,5 +81,7 @@ df = pd.DataFrame.from_records(output, columns =[xlabel, ylabel])
 plt.figure(figsize=(20,4))
 sns.barplot(xlabel, ylabel, data=df, palette="cubehelix").set_title(title)
 ```
-
+## Result 
+![Output after processing the data](https://github.com/Saikrishna1545/bigData-Project/blob/main/outputresult.JPG)
+![Output after Charting the data](https://github.com/Saikrishna1545/bigData-Project/blob/main/bargraph.JPG)
 
