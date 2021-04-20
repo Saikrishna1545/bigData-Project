@@ -1,6 +1,9 @@
 # bigData-Project
 This project is based on Word Count of a file using PySpark and Databricks.
 
+## Databricks published link
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/548800649193321/3277976591978073/7444943312366472/latest.html
+
 # Input Source
  * The input Source file was taken from a URL which is in text format.For this project, I have taken data as 
    [TThe Project Gutenberg eBook of Power Through Prayer, by Edward Bounds](https://www.gutenberg.org/files/65115/65115-0.txt)
