@@ -19,3 +19,7 @@ urllib.request.urlretrieve(stringInURL,"/tmp/power.txt")
     ```python
   dbutils.fs.mv("file:/tmp/power.txt","dbfs:/data/throughPower.txt")
     ```
+    3. Transferring the data file into spark
+    ```python
+    powerRawRDD= sc.textFile("dbfs:/data/throughPower.txt")
+    ```
