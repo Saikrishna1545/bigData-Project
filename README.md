@@ -64,3 +64,22 @@ print(results)
 ```pytho
 sorted(results, key=lambda t: t[1], reverse=True)[:10]
 ```
+## Charting the data
+* Displaying the obtained results and  importing all the libraries to plot the graph
+```pytho
+import pandas as pd # 
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+* reparing chart information
+```pytho
+source = 'The Project Power Through Prayer by Edward M. Bounds'
+title = 'Top Words in ' + source
+xlabel = 'Words'
+ylabel = 'Count'
+df = pd.DataFrame.from_records(output, columns =[xlabel, ylabel]) 
+plt.figure(figsize=(20,4))
+sns.barplot(xlabel, ylabel, data=df, palette="cubehelix").set_title(title)
+```
+
+
