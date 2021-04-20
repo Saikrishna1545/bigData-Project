@@ -9,8 +9,10 @@ This project is based on Word Count of a file using PySpark and Databricks.
 
 ## Step 1:- Data Injection
    1. In first step, import all tlibraries and start fetching the data from the URL
-   2. # fetching the text data from url
-   3.import urllib.request 
+   ```python
+# fetching the text data from url
+import urllib.request 
 stringInURL = "https://www.gutenberg.org/files/65115/65115-0.txt"
 urllib.request.urlretrieve(stringInURL,"/tmp/power.txt")
+```
    
