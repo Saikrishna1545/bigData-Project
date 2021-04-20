@@ -137,3 +137,10 @@ wordcloud_generator.create_word_cloud(clean_data)
 ## Result of word Cloud
 ![](https://github.com/Saikrishna1545/bigData-Project/blob/main/wordcloud.JPG)
 
+## Conclusion
+Based on the results obtained, the top 15 words of 'The Project Gutenberg eBook of Power Through Prayer, by Edward Bounds' are 'prayer','god','praying', 'preacher', 'work','may', 'heart','preaching','project','men','must','man','life','gods' and 'great'.how to make donations to the Project Gutenberg Literary Archive Foundation, how to help produce our new eBooks, and how to subscribe to our email newsletter to hear about new eBooks
+
+##  References
+- [Introduction to PySpark](https://github.com/denisecase/starting-spark)
+- [Spark Key Terms](https://sparkbyexamples.com/)
+- [To build an image using  WordCloud](https://www.section.io/engineering-education/word-cloud/)
