@@ -15,4 +15,7 @@ import urllib.request
 stringInURL = "https://www.gutenberg.org/files/65115/65115-0.txt"
 urllib.request.urlretrieve(stringInURL,"/tmp/power.txt")
 ```
-   
+   2. Next, moved the file from temp folder to databricks storage folder of dbfs
+    ```python
+  dbutils.fs.mv("file:/tmp/power.txt","dbfs:/data/throughPower.txt")
+    ```
