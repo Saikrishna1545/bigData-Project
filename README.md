@@ -45,3 +45,22 @@ powerWordsRDD = wordsAfterCleanedTokensRDD.filter(lambda word: word not in stopw
 ```python
 powerRemoveSpaceRDD = powerWordsRDD.filter(lambda x: x != "")
 ```
+## Step 3:- Processing the data
+1.  In this step we will pair up each word in the  file andthen after we  count it as 1 as an intermediate Key-value pairs and need to transform the words using reduceByKey() to get the total count of all distinct words. To get back to python, we use collect() and then print the obtained results.
+* map() words to (word,1) immediate key-value pairs
+```python
+powerPairsRDD = powerRemoveSpaceRDD.map(lambda eachWord: (eachWord,1))
+```
+* transforming the words using reduceByKey() to get (word,count) results
+```pytho
+powerWordCountRDD = powerPairsRDD.reduceByKey(lambda acc, value: acc + value)
+```
+* collect() action to get back to python
+```pytho
+results = powerWordCountRDD.collect()
+print(results)
+```
+* based on highest count sorting of the word and displaying them in descending order
+```pytho
+sorted(results, key=lambda t: t[1], reverse=True)[:10]
+```
