@@ -15,11 +15,12 @@ import urllib.request
 stringInURL = "https://www.gutenberg.org/files/65115/65115-0.txt"
 urllib.request.urlretrieve(stringInURL,"/tmp/power.txt")
 ```
-   2. Next, moved the file from temp folder to databricks storage folder of dbfs
-    ```python
-  dbutils.fs.mv("file:/tmp/power.txt","dbfs:/data/throughPower.txt")
-    ```
-    3. Transferring the data file into spark
-    ```python
-    powerRawRDD= sc.textFile("dbfs:/data/throughPower.txt")
-    ```
+2. Next, move the file from temp folder to databricks storage folder of dbfs
+
+```python
+ddbutils.fs.mv("file:/tmp/power.txt","dbfs:/data/throughPower.txt")
+```
+3. Then, transfer the data file into Spark using sparkContext 
+```python
+powerRawRDD= sc.textFile("dbfs:/data/throughPower.txt")
+````
